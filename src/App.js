@@ -21,6 +21,7 @@ function App() {
       </header>
     </div>
   );
+import './App.scss';
 }
 
 export default App;
