@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from 'react-bulma-components/lib/components/navbar';
 
 const Header = () => {
-  return <Navbar color={"primary"}>
+  return <Navbar>
     <Navbar.Brand>
       <Navbar.Item renderAs="a" href="#">
         Chordee
