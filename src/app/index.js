@@ -4,6 +4,7 @@ import '../styles/App.scss';
 import Header from '../components/Header';
 import HomePage from '../pages/HomePage';
 import SongsList from '../pages/SongsList';
+import SongView from '../pages/SongView';
 import NotFoundPage from '../pages/NotFoundPage';
 
 import { useRoutes } from 'hookrouter';
@@ -11,8 +12,7 @@ import { useRoutes } from 'hookrouter';
 const routes = {
   '/': () => <HomePage />,
   '/songs': () => <SongsList />,
-  // '/products': () => <ProductOverview />,
-  // '/products/:id': ({id}) => <ProductDetails id={id} />
+  '/song/:id': ({ id }) => <SongView id={id} />,
 };
 
 const App = () => {
