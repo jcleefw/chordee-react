@@ -80,22 +80,22 @@ function ChordeeApi() {
     },
 
     createSong(data) {
-      const url = '/api/song/';
+      const url = BASE_URL + '/api/song/';
       return makePostRequest(url, data);
     },
 
     fetchSong(id) {
-      const url = `/api/song/${id}`;
+      const url = BASE_URL + `/api/song/${id}`;
       return makeGetRequest(url);
     },
 
     updateSong(id, data) {
-      const url = `/api/song/${id}`;
+      const url = BASE_URL + `/api/song/${id}`;
       return makePutRequest(url, data);
     },
 
     deleteSong(id) {
-      const url = `/api/delete-song/${id}`
+      const url = BASE_URL + `/api/delete-song/${id}`
       return makeDeleteRequest(url);
     },
   };
