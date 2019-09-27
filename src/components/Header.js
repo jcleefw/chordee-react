@@ -11,7 +11,7 @@ const Header = () => {
     <Navbar.Menu>
       <Navbar.Container>
         <Navbar.Item href="/">Home</Navbar.Item>
-        <Navbar.Item href="/about">About</Navbar.Item>
+        <Navbar.Item href="/songs">Songs</Navbar.Item>
       </Navbar.Container>
     </Navbar.Menu>
   </Navbar>
