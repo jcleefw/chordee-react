@@ -1,15 +1,15 @@
 import React from 'react';
-import './App.scss';
+import '../styles/App.scss';
 
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import NotFoundPage from './pages/NotFoundPage';
+import HomePage from '../pages/HomePage';
+import SongsList from '../pages/SongsList';
+import NotFoundPage from '../pages/NotFoundPage';
 
 import { useRoutes } from 'hookrouter';
 
 const routes = {
   '/': () => <HomePage />,
-  '/about': () => <AboutPage />,
+  '/songs': () => <SongsList />,
   // '/products': () => <ProductOverview />,
   // '/products/:id': ({id}) => <ProductDetails id={id} />
 };
