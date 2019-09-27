@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ChordeeApi from '../api';
+import Table from 'react-bulma-components/lib/components/table';
 
 function SongsList() {
   const chordeeApi = new ChordeeApi();
@@ -25,23 +26,27 @@ function SongsList() {
       <td>{song.name}</td>
       <td>{song.artist.join()}</td>
       <td>{song.format}</td>
+      <td><a href={`/song/${song.id}`}>View</a></td>
     </tr>
   )
 
+  const displaySongHeader = () => <thead>
+    <tr>
+      <th>Name</th>
+      <th>Artist</th>
+      <th>Format</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
 
   return <section>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Artist</th>
-          <th>Format</th>
-        </tr>
-      </thead>
+    <Table>
+      {displaySongHeader()}
       <tbody>
         {displaySongs()}
       </tbody>
-    </table>
+    </Table>
   </section>
 }
 
