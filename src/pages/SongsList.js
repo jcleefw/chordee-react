@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ChordeeApi from '../api';
-import Header from '../components/Header';
 
 function SongsList() {
   const chordeeApi = new ChordeeApi();
@@ -30,23 +29,20 @@ function SongsList() {
   )
 
 
-  return <div>
-    <Header />
-    <section>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Artist</th>
-            <th>Format</th>
-          </tr>
-        </thead>
-        <tbody>
-          {displaySongs()}
-        </tbody>
-      </table>
-    </section>
-  </div>
+  return <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Artist</th>
+          <th>Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        {displaySongs()}
+      </tbody>
+    </table>
+  </section>
 }
 
 export default SongsList;

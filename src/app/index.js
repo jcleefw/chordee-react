@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/App.scss';
 
+import Header from '../components/Header';
 import HomePage from '../pages/HomePage';
 import SongsList from '../pages/SongsList';
 import NotFoundPage from '../pages/NotFoundPage';
@@ -15,9 +16,12 @@ const routes = {
 };
 
 const App = () => {
-  const routeResult = useRoutes(routes);
+  const routeResult = useRoutes(routes) || <NotFoundPage />;
 
-  return routeResult || <NotFoundPage />;
+  return <div>
+    <Header />
+    {routeResult}
+  </div>
 }
 
 
