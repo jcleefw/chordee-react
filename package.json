@@ -9,11 +9,10 @@
     "react": "^16.9.0",
     "react-bulma-components": "2.3.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=8000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
