@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ChordeeApi from '../api';
+import Heading from 'react-bulma-components/lib/components/heading';
 
 function SongView({ id }) {
   const chordeeApi = new ChordeeApi();
@@ -22,6 +23,10 @@ function SongView({ id }) {
   return <section>
     <div className="columns">
       <div className="column song-view">
+
+        <Heading size={4}>
+          {song.name}
+        </Heading>
         {song.sheetMusic}
       </div>
     </div>

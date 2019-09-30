@@ -26,7 +26,7 @@ function SongsList() {
       <td>{song.name}</td>
       <td>{song.artist.join()}</td>
       <td>{song.format}</td>
-      <td><a href={`/song/${song.id}`}>View</a></td>
+      <td><a href={`/song/${song._id}`}>View</a></td>
     </tr>
   )
 
