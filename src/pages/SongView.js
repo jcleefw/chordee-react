@@ -3,22 +3,15 @@ import ChordeeApi from '../api';
 import Heading from 'react-bulma-components/lib/components/heading';
 
 function SongView({ id }) {
-  const chordeeApi = new ChordeeApi();
   const [song, setSong] = useState([]);
-
-  function fetchSongById(id) {
-    console.log(id)
-    chordeeApi.fetchSong(id).then((data) => {
-      setSong(data.data);
-    });
-  }
   useEffect(() => {
+    const chordeeApi = new ChordeeApi();
     chordeeApi
       .fetchSong(id)
       .then((data) => {
         setSong(data.data);
       });
-  }, [song]);
+  }, [id]);
 
   return <section>
     <div className="columns">
