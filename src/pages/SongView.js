@@ -16,7 +16,6 @@ function SongView({ id }) {
   return <section>
     <div className="columns">
       <div className="column song-view">
-
         <Heading size={4}>
           {song.name}
         </Heading>

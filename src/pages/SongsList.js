@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ChordeeApi from '../api';
-import Table from 'react-bulma-components/lib/components/table';
 
 function SongsList() {
   const chordeeApi = new ChordeeApi();
@@ -40,13 +39,20 @@ function SongsList() {
   </thead>
 
 
-  return <section>
-    <Table>
-      {displaySongHeader()}
-      <tbody>
-        {displaySongs()}
-      </tbody>
-    </Table>
+  return <section className="section">
+    <div className="columns">
+      <div className="column is-2 is-offset-10 ">
+        <button className="button is-primary is-right">New Song</button>
+      </div>
+    </div>
+    <div className="columns">
+      <table className="table is-fullwidth">
+        {displaySongHeader()}
+        <tbody>
+          {displaySongs()}
+        </tbody>
+      </table>
+    </div>
   </section>
 }
 

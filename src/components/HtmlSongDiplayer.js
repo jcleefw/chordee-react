@@ -1,6 +1,6 @@
 import React from 'react';
 import ChordSheetJS from 'chordsheetjs';
-import SongFormatter from '../formatter/songFormatter'
+import SongFormatter from '../formatter/songFormatter';
 
 function format(chordSheet) {
   const parser = new ChordSheetJS.ChordSheetParser();
