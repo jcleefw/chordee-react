@@ -7,17 +7,15 @@ Let it be, let it be, let it be, let it be
 C                G              F  C/E Dm C
 Whisper words of wisdom, let it be`.substring(1)
 
-const HomePage = () => {
-  return <section>
-    <div className="columns">
-      <div className="column">
-        {chordSheet}
-      </div>
-      <div className="column">
-        <HtmlSongDisplayer chordSheet={chordSheet} />
-      </div>
+const HomePage = () =>
+  <div className="columns">
+    <div className="column">
+      {chordSheet}
     </div>
-  </section>
-}
+    <div className="column">
+      <HtmlSongDisplayer chordSheet={chordSheet} />
+    </div>
+  </div>
+
 
 export default HomePage;

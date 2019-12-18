@@ -22,7 +22,9 @@ const App = () => {
 
   return <div>
     <Header />
-    {routeResult}
+    <section className="section">
+      {routeResult}
+    </section>
   </div>
 }
 

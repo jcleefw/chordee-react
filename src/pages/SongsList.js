@@ -39,7 +39,7 @@ function SongsList() {
   </thead>
 
 
-  return <section className="section">
+  return <div>
     <div className="columns">
       <div className="column is-2 is-offset-10 ">
         <button className="button is-primary is-right">New Song</button>
@@ -53,7 +53,7 @@ function SongsList() {
         </tbody>
       </table>
     </div>
-  </section>
+  </div>
 }
 
 export default SongsList;

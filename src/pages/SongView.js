@@ -13,16 +13,14 @@ function SongView({ id }) {
       });
   }, [id]);
 
-  return <section>
-    <div className="columns">
-      <div className="column song-view">
-        <Heading size={4}>
-          {song.name}
-        </Heading>
-        {song.sheetMusic}
-      </div>
+  return <div className="columns">
+    <div className="column song-view">
+      <Heading size={4}>
+        {song.name}
+      </Heading>
+      {song.sheetMusic}
     </div>
-  </section>
+  </div>
 
 }
 
